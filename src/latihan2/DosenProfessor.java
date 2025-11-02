@@ -1,3 +1,5 @@
+package latihan2;
+
 public class DosenProfessor extends Dosen {
     // Properties tambahan
     private String gelarProfesor;
@@ -8,11 +10,18 @@ public class DosenProfessor extends Dosen {
                           String mataKuliah, int pengalamanMengajar,
                           String gelarProfesor, int jumlahPenelitian) {
         // TODO: Implementasi
+        super(nip, nama, jurusan, mataKuliah, pengalamanMengajar);
+        this.gelarProfesor = gelarProfesor;
+        this.jumlahPenelitian = jumlahPenelitian;
+        System.out.println("DosenProfessor constructor called");
     }
 
     // Override displayInfo (chain dari Dosen)
     @Override
     public void displayInfo() {
         // TODO: Call super dan tambah info profesor
+        super.displayInfo();
+        System.out.println("Gelar Profesor: " + gelarProfesor);
+        System.out.println("Jumlah Penelitian: " + jumlahPenelitian);
     }
 }

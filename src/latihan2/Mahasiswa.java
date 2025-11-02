@@ -1,3 +1,5 @@
+package latihan2;
+
 public class Mahasiswa {
     // Properties
     private String nim;
@@ -8,26 +10,33 @@ public class Mahasiswa {
     // Constructor
     public Mahasiswa(String nim, String nama, String jurusan, double ipk) {
         // TODO: Implementasi
+        this.nim = nim;
+        this.nama = nama;
+        this.jurusan = jurusan;
+        this.ipk = ipk;
     }
 
     // Override toString
     @Override
     public String toString() {
         // TODO: Return string representation
-        return "";
+        return "Mahasiswa{nim='" + nim + "', nama='" + nama + "', jurusan='" + jurusan + "', ipk=" + ipk + "}";
     }
 
     // Override equals - compare by NIM
     @Override
     public boolean equals(Object obj) {
         // TODO: Implementasi equals berdasarkan NIM
-        return false;
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Mahasiswa other = (Mahasiswa) obj;
+        return nim.equals(other.nim);
     }
 
     // Override hashCode (best practice dengan equals)
     @Override
     public int hashCode() {
         // TODO: Return hash dari NIM
-        return 0;
+        return nim.hashCode();
     }
 }

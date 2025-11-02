@@ -1,44 +1,42 @@
 package latihan1;
 
-public class Mobil {
-    public Mobil(String toyota, String hitam, int i, int i1, String bensin) {
-        class mobil extends Kendaraan {
-            // Properties tambahan
-            private int jumlahPintu;
-            private String jenisBahanBakar;
+public class Mobil extends Kendaraan {
+    // Properties tambahan
+    private int jumlahPintu;
+    private String jenisBahanBakar;
 
-            // Constructor
-            public mobil(String merk, String warna, int tahunProduksi, int jumlahPintu, String jenisBahanBakar) {
-                // TODO: Panggil constructor parent dengan super()
-                // TODO: Inisialisasi properties tambahan
-                // TODO: Print "Constructor Mobil dipanggil"
-            }
+    // Constructor
+    public Mobil(String merk, String warna, int tahunProduksi, int jumlahPintu, String jenisBahanBakar) {
+        // TODO: Panggil constructor parent dengan super()
+        super(merk, warna, tahunProduksi);
 
-            // Override method displayInfo
-            @Override
-            public void displayInfo() {
-                // TODO: Panggil super.displayInfo() terlebih dahulu
-                // TODO: Tambahkan informasi spesifik Mobil
-            }
+        // TODO: Inisialisasi properties tambahan
+        this.jumlahPintu = jumlahPintu;
+        this.jenisBahanBakar = jenisBahanBakar;
 
-            // Method tambahan khusus Mobil
-            public void nyalakanAC() {
-                // TODO: Print "AC menyala"
-            }
-
-            // Getter
-            public int getJumlahPintu() {
-                return jumlahPintu;
-            }
-        }
+        // TODO: Print "Constructor Mobil dipanggil"
+        System.out.println("Constructor Mobil dipanggil");
     }
 
-    public Mobil() {
-    }
-
+    // Override method displayInfo
+    @Override
     public void displayInfo() {
+        // TODO: Panggil super.displayInfo() terlebih dahulu
+        super.displayInfo();
+
+        // TODO: Tambahkan informasi spesifik Mobil
+        System.out.println("Jumlah Pintu: " + jumlahPintu);
+        System.out.println("Bahan Bakar: " + jenisBahanBakar);
     }
 
+    // Method tambahan khusus Mobil
     public void nyalakanAC() {
+        // TODO: Print "AC menyala"
+        System.out.println("AC menyala");
+    }
+
+    // Getter
+    public int getJumlahPintu() {
+        return jumlahPintu;
     }
 }
